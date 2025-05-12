@@ -1,3 +1,5 @@
+package ru.netology.passwords;
+
 public class PasswordChecker {
     private Integer minLength;
 

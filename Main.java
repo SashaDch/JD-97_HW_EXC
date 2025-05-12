@@ -1,3 +1,5 @@
+import ru.netology.passwords.PasswordChecker;
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,7 +21,7 @@ public class Main {
                 System.out.println("Неверный формат числа: " + e);
                 continue;
             } catch (IllegalArgumentException e) {
-                System.out.println(e);
+                System.out.println("Неверный аргумент: " + e);
                 continue;
             }
             break;
@@ -38,7 +40,7 @@ public class Main {
                 System.out.println("Неверный формат числа: " + e);
                 continue;
             } catch (IllegalArgumentException e) {
-                System.out.println(e);
+                System.out.println("Неверный аргумент: " + e);
                 continue;
             }
             break;
@@ -54,11 +56,11 @@ public class Main {
             try {
                 if (passwordChecker.verify(userInput)) {
                     System.out.println("Подходит!");
-                } else  {
+                } else {
                     System.out.println("Не подходит!");
                 }
             } catch (IllegalStateException e) {
-                System.out.println(e);
+                System.out.println("Ошибка состояния: " + e);
                 return;
             }
         }
